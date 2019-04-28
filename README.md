@@ -1,57 +1,60 @@
-# ptemplate
-[![Dependencies](https://david-dm.org/nethruster/ptemplate.svg)](https://david-dm.org/nethruster/ptemplate) [![DevDependencies](https://david-dm.org/nethruster/ptemplate/dev-status.svg)](https://david-dm.org/nethruster/ptemplate?type=dev)
+<p align="center">
+  <a href="https://yarnpkg.com/">
+    <img alt="Yarn" src="https://github.com/yarnpkg/assets/blob/master/yarn-kitten-full.png?raw=true" width="546">
+  </a>
+</p>
 
-A personal website template that's not a pain in the ass to setup and use.
+<p align="center">
+  Fast, reliable, and secure dependency management.
+</p>
 
-[Demo](https://ptemplate.nethruster.com)
+<p align="center">
+  <a href="https://circleci.com/gh/yarnpkg/yarn"><img alt="Circle Status" src="https://circleci.com/gh/yarnpkg/yarn.svg?style=shield&circle-token=5f0a78473b0f440afb218bf2b82323cc6b3cb43f"></a>
+  <a href="https://ci.appveyor.com/project/kittens/yarn/branch/master"><img alt="Appveyor Status" src="https://ci.appveyor.com/api/projects/status/0xdv8chwe2kmk463?svg=true"></a>
+  <a href="https://dev.azure.com/yarnpkg/yarn/_build"><img alt="Azure Pipelines status" src="https://dev.azure.com/yarnpkg/yarn/_apis/build/status/Yarn%20Acceptance%20Tests"></a>
+  <a href="https://discord.gg/yarnpkg"><img alt="Discord Chat" src="https://img.shields.io/discord/226791405589233664.svg"></a>
+  <a href="http://commitizen.github.io/cz-cli/"><img alt="Commitizen friendly" src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg"></a>
+</p>
 
-Example screenshot
-![alt text](https://github.com/nethruster/ptemplate/blob/master/src/assets/icons/meta-img.png "Home screenshot")
+---
 
-### Requirements
-- You need to have `yarn` (**recommended**) or `npm` installed.
+**Fast:** Yarn caches every package it has downloaded, so it never needs to download the same package again. It also does almost everything concurrently to maximize resource utilization. This means even faster installs.
 
-### Useful commands
+**Reliable:** Using a detailed but concise lockfile format and a deterministic algorithm for install operations, Yarn is able to guarantee that any installation that works on one system will work exactly the same on another system.
 
-#### Yarn
-- `yarn` - Install and update dependencies.
-- `yarn dev` - Launch local web server with hot compiling. Ideal to work on the project easily.
-- `yarn build` - Build the website in production mode to the `dist/` folder.
-- `yarn build-gz` - Builds a gzip compressed version of the built app in the dist/ folder.
+**Secure:** Yarn uses checksums to verify the integrity of every installed package before its code is executed.
 
-#### NPM
-- `npm install` - Install and update dependencies.
-- `npm run dev` - Launch local web server with hot compiling. Ideal to work on the project easily.
-- `npm run build` - Build the website in production mode to the `dist/` folder.
-- `npm run build-gz` - Builds a gzip compressed version of the built app in the dist/ folder.
+## Features
 
-## Customization
+* **Offline Mode.** If you've installed a package before, then you can install it again without an internet connection.
+* **Deterministic.** The same dependencies will be installed in the same exact way on any machine, regardless of installation order.
+* **Network Performance.** Yarn efficiently queues requests and avoids request waterfalls in order to maximize network utilization.
+* **Network Resilience.** A single request that fails will not cause the entire installation to fail. Requests are automatically retried upon failure.
+* **Flat Mode.** Yarn resolves mismatched versions of dependencies to a single version to avoid creating duplicates.
+* **More emojis.** 🐈
 
-Note: To apply all of these changes you must rebuild the app.
+## Installing Yarn
 
-### If you're not hosting the app at the root of the server
-Go to `webpack.config.js` and change the `publicPath` key inside of the `output` part of the config
+Read the [Installation Guide](https://yarnpkg.com/en/docs/install) on our website for detailed instructions on how to install Yarn.
 
-### Favicons
-You can replace them at `src/assets/icons/`.
+## Using Yarn
 
-### Avatar
-You can replace it at `src/assets/`. If the name or the extension is different to "avatar.svg", you need to modify it in `src/config.js` and `src/assets-imports.js`.
+Read the [Usage Guide](https://yarnpkg.com/en/docs/usage) on our website for detailed instructions on how to use Yarn.
 
-### Title
-Change the <title> tag in `src/index.html`.
+## Contributing to Yarn
 
-### Most of the UI (description, work content, contact icons...)
-Modify `src/config.js`. You can add, remove or modify its contents.
+Contributions are always welcome, no matter how large or small. Substantial feature requests should be proposed as an [RFC](https://github.com/yarnpkg/rfcs). Before contributing, please read the [code of conduct](CODE_OF_CONDUCT.md).
 
-### ReCATPCHA public key
-Change it in `src/config.js`.
+See [Contributing](https://yarnpkg.com/org/contributing/).
 
-### Translations
-Customize them in the `src/assets/lang/` folder. Add a new lang file named by the [IEC_15897](https://en.wikipedia.org/wiki/ISO/IEC_15897) standard, paste contents from your source locale and translate it. To activate a language copy the contents from the source locale to `src/asssets/lang.json`.
+## Prior art
 
-### Add icons
-Add new icon paths with the desired ID in the `src/assets/icons.svg` file.
+Yarn wouldn't exist if it wasn't for excellent prior art. Yarn has been inspired by the following projects:
 
-## Usage
-Once everything is compiled and built the last step is to serve the contents of the `dist/` folder as static files with your web server of choice and you're done! 
+ - [Bundler](https://github.com/bundler/bundler)
+ - [Cargo](https://github.com/rust-lang/cargo)
+ - [npm](https://github.com/npm/cli)
+
+## Credits
+
+Thanks to [Sam Holmes](https://github.com/samholmes) for donating the npm package name!
