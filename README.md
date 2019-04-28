@@ -1,1 +1,1 @@
-[url=https://postimages.org/][img]https://i.postimg.cc/GprQnyLF/screenshot.png[/img][/url]
+[url=https://postimg.cc/ZW73r0yn][img]https://i.postimg.cc/ZW73r0yn/screenshot.png[/img][/url]
